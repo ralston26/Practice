@@ -3,7 +3,7 @@ public class compress {
 
 	public static void main(String args[]){
 		
-		String string ="aaabbbabccc";
+		String string ="aaabbbabcccjjjjjj";
 		char [] a=string.toCharArray();
 		StringBuilder s=new StringBuilder();
 		int count=1;int j=0;
@@ -11,6 +11,7 @@ public class compress {
 		{
 			if(a[i]==a[i+1])
 				count++;
+			
 			else
 			{
 				s.append(a[i]);
@@ -18,7 +19,8 @@ public class compress {
 				count=1;
 			}
 		}
-		
+		s.append(a[i]);
+		s.append(count);
 		System.out.println(s);
 	}
 	
